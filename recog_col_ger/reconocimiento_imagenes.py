@@ -27,7 +27,7 @@ def encontrar_color_mas_cercano(color, colores_conocidos):
     return min(distancias, key=distancias.get)
 
 # Cargar la imagen
-image_path = 'prueba1.jpeg'
+image_path = 'recog_col_ger/prueba2.jpeg'
 image = Image.open(image_path)
 image = image.convert('RGB')
 pixels = np.array(image)
@@ -38,7 +38,7 @@ width = pixels.shape[1]
 middle_y = height // 2
 
 # Suponer que tenemos un número conocido de fichas de LEGO alineadas
-numero_de_fichas = 3
+numero_de_fichas = 5
 ancho_ficha = width // numero_de_fichas
 
 # Almacenar los colores encontrados para cada ficha
