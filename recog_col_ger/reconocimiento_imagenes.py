@@ -1,7 +1,6 @@
 from PIL import Image
 import numpy as np
 
-
 # Asignar colores conocidos
 colores_conocidos = {
     'Negro': [0, 0, 0], 'Gris oscuro': [115, 116, 115], 'Gris claro': [160, 160, 160], 'Beige': [155, 144, 114], 'Beige oscuro': [143, 131, 97], 'Vasija': [148, 128, 108], 'Teja': [150, 75, 45], 'Marron': [37, 73, 141], 'Granate': [128, 0, 32], 'Rojo': [255, 0, 0], 'Naranja': [255, 165, 0], 'Pure de calabaza': [237, 145, 33], 'Amarillo': [255, 255, 0], 'Pistacho': [147, 197, 114], 'Verde': [0, 255, 0], 'Verde vidrio': [144, 238, 144], 'Verde bosque': [34, 139, 34], 'Azul marino': [0, 0, 128], 'Azul electrico': [0, 0, 255], 'Azul cielo': [135, 206, 250], 'Azul turquesa': [64, 224, 208], 'Violeta': [143, 0, 255], 'Morado': [128, 0, 128], 'Rosa fucsia': [255, 0, 255], 'Rosa': [255, 192, 203], 'Rosa chicle': [255, 183, 197], 'Blanco': [255, 255, 255]
@@ -64,5 +63,3 @@ for i in range(numero_de_fichas):
 
 # Imprimir los colores identificados para cada ficha de LEGO en la imagen
 print(colores_encontrados)
-
-
