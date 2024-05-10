@@ -27,11 +27,11 @@ def encontrar_color_mas_cercano(color, colores_conocidos):
     return min(distancias, key=distancias.get)
 
 # Cargar la imagen
-def color_recognise(path):
+def color_recognise(path, n):
     image = Image.open(path)
     image = image.convert('RGB')
     pixels = np.array(image)
-    df = pd.read_csv('colores.csv')
+    df = pd.read_csv('recog_col_ger/colores.csv')
 
     # Suponiendo que las fichas están alineadas horizontalmente en el centro de la imagen
     height = pixels.shape[0]
@@ -39,14 +39,13 @@ def color_recognise(path):
     middle_y = height // 2
 
     # Suponer que tenemos un número conocido de fichas de LEGO alineadas
-    numero_de_fichas = 6
-    ancho_ficha = width // numero_de_fichas
+    ancho_ficha = width // n
 
     # Almacenar los colores encontrados para cada ficha
     colores_encontrados = []
 
     # Iterar sobre cada ficha LEGO en la imagen
-    for i in range(numero_de_fichas):
+    for i in range(n):
         # Calcular el inicio y el fin de la región de la ficha en x
         start_x = i * ancho_ficha
         end_x = (i + 1) * ancho_ficha
@@ -74,5 +73,5 @@ def color_recognise(path):
     return palabra
 
 
-print(color_recognise('patata.jpeg'))
+
 
