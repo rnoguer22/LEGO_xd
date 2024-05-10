@@ -1,4 +1,6 @@
-# LEGO_xd
+# LEGO
+
+Click [aquí](https://github.com/rnoguer22/LEGO_xd.git) para ver el enlace del repositorio.
 
 Trabajo hecho por: 
 
@@ -15,4 +17,4 @@ Trabajo hecho por:
 11. [Pelayo Huerta Mijares](https://github.com/pelahumi)
 12. [Germán Llorente Muñoz](https://github.com/Germiprogramer)
 
-El link al repositorio es el siguiente : https://github.com/rnoguer22/LEGO_xd.git
+
