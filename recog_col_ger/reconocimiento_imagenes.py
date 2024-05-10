@@ -15,8 +15,10 @@ def encontrar_color_mas_cercano(color):
     return min(distancias, key=distancias.get)
 
 # Función para calcular la distancia euclidiana entre dos colores
+
 def distancia_color(color1, color2):
     return np.linalg.norm(color1 - color2)
+
 
 # Función para encontrar el color LEGO más cercano al color de la ficha
 def encontrar_color_mas_cercano(color, colores_conocidos):

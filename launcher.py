@@ -2,17 +2,20 @@ from cesar_cypher.cesar import cesar
 from recog_col_ger.reconocimiento_imagenes import color_recognise
 
 def launcher():
-    path = 'img/hola.jpeg'
-    palabra = color_recognise(path, 4)
+    path1 = 'img/hola.jpeg'
+    path2 = 'img/patata.jpeg'
 
-    print(palabra, end='')
+    palabra1 = color_recognise(path1, 4)
+    palabra2 = color_recognise(path2, 6)
 
-    print('\n')
+    hola = ''.join(palabra1)
+    patata = ''.join(palabra2)
 
-    resultado = ''
+    print(hola, patata)
 
-    for item in palabra:
-        resultado += cesar(item) + ''
+    #Cifrado Cesar de 11 posiciones
     
-    return resultado
+    hola_cipher = cesar(hola, 11)
+    patata_cipher = cesar(patata, 11)
 
+    print(hola_cipher, patata_cipher)
