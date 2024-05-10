@@ -74,3 +74,5 @@ def color_recognise(path):
     return palabra
 
 
+print(color_recognise('prueba1.jpeg'))
+
