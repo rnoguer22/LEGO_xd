@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Asignar colores conocidos
-colores_conocidos = {'Negro': [5, 19, 29], 'Gris oscuro': [108, 110, 104], 'Gris claro': [171, 173, 172], 'Beige': [220, 188, 129], 'Beige oscuro': [180, 132, 85], 'Vasija': [169, 85, 0], 'Teja': [173, 97, 64], 'Marron': [148, 81, 72], 'Granate': [135, 43, 23], 'Rojo': [201, 26, 29], 'Naranja': [255, 128, 20], 'Pure de calabaza': [250, 156, 28], 'Amarillo': [248, 241, 132], 'Pistacho': [199, 210, 60], 'Verde': [0, 100, 0], 'Verde vidrio': [0, 146, 71], 'Verde bosque': [0, 74, 45], 'Azul marino': [27, 42, 52], 'Azul electrico': [0, 87, 153], 'Azul cielo': [0, 153, 212], 'Azul turquesa': [63, 182, 158], 'Violeta': [255, 213, 237], 'Morado': [129, 0, 123], 'Rosa fucsia': [199, 0, 57], 'Rosa': [255, 105, 143], 'Rosa chicle': [252, 151, 172], 'Blanco': [255, 255, 255]}
+colores_conocidos = {'Negro': [21, 21, 21], 'Gris oscuro': [108, 110, 104], 'Gris claro': [171, 173, 172], 'Beige': [220, 188, 129], 'Beige oscuro': [180, 132, 85], 'Vasija': [169, 85, 0], 'Teja': [173, 97, 64], 'Marron': [148, 81, 72], 'Granate': [135, 43, 23], 'Rojo': [201, 26, 29], 'Naranja': [255, 128, 20], 'Pure de calabaza': [250, 156, 28], 'Amarillo': [248, 241, 132], 'Pistacho': [199, 210, 60], 'Verde': [0, 100, 0], 'Verde vidrio': [0, 146, 71], 'Verde bosque': [0, 74, 45], 'Azul marino': [27, 42, 52], 'Azul electrico': [0, 87, 153], 'Azul cielo': [0, 153, 212], 'Azul turquesa': [63, 182, 158], 'Violeta': [255, 213, 237], 'Morado': [129, 0, 123], 'Rosa fucsia': [199, 0, 57], 'Rosa': [255, 105, 143], 'Rosa chicle': [252, 151, 172], 'Blanco': [255, 255, 255]}
 
 # Función para calcular la distancia entre colores
 def distancia_color(color1, color2):
