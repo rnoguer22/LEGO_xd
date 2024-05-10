@@ -16,4 +16,3 @@ def launcher():
     
     return resultado
 
-print(launcher())
