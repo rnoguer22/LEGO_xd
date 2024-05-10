@@ -35,9 +35,9 @@ El taller tiene como objetivo introducir a los participantes en los fundamentos 
   - Construir la Clave seleccionando y combinando piezas de LEGO según una tabla de colores y valores.
   - Registrar la Clave anotando la combinación de colores y calculando el desplazamiento total.
 
-### Cifrar y Descifrar Mensajes
+### Cifrar mensajes
 
-- **Objetivo:** Usar la aplicación Gradio para cifrar y descifrar mensajes utilizando las claves de LEGO que se han construido.
+- **Objetivo:** Cifrar mensajes utilizando las claves de LEGO que se han construido.
 
 - **Pasos:**
   - Cifrar un Mensaje: Ingresar un mensaje corto en la aplicación y aplicar el desplazamiento para cifrarlo.
@@ -69,8 +69,9 @@ El programa recibe estas imágenes:
 ![image](https://github.com/rnoguer22/LEGO_xd/assets/91721860/2d5c99ef-a002-44d4-a570-d67f41364f92)
 
 
-Y nos devuelve:
+Y nos devuelve la palabra que le damos y la misma cifrada en cesar:
 
 HOLA PATATA
+
 rzvl alelel
 
