@@ -14,5 +14,5 @@ def extraer_colores_del_csv(nombre_archivo):
     return colores_dict
 
 # Usar la función, asumiendo que el archivo se llama 'colores.csv'
-colores = extraer_colores_del_csv('recog_col_ger.colores.csv')
+colores = extraer_colores_del_csv('colores.csv')
 print(colores)
