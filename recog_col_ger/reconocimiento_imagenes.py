@@ -1,5 +1,6 @@
 from PIL import Image
 import numpy as np
+import pandas as pd
 
 # Asignar colores conocidos
 colores_conocidos = {
@@ -26,40 +27,50 @@ def encontrar_color_mas_cercano(color, colores_conocidos):
     return min(distancias, key=distancias.get)
 
 # Cargar la imagen
-image_path = 'recog_col_ger/prueba2.jpeg'
-image = Image.open(image_path)
-image = image.convert('RGB')
-pixels = np.array(image)
+def color_recognise(path):
+    image = Image.open(path)
+    image = image.convert('RGB')
+    pixels = np.array(image)
+    df = pd.read_csv('colores.csv')
 
-# Suponiendo que las fichas están alineadas horizontalmente en el centro de la imagen
-height = pixels.shape[0]
-width = pixels.shape[1]
-middle_y = height // 2
+    # Suponiendo que las fichas están alineadas horizontalmente en el centro de la imagen
+    height = pixels.shape[0]
+    width = pixels.shape[1]
+    middle_y = height // 2
 
-# Suponer que tenemos un número conocido de fichas de LEGO alineadas
-numero_de_fichas = 5
-ancho_ficha = width // numero_de_fichas
+    # Suponer que tenemos un número conocido de fichas de LEGO alineadas
+    numero_de_fichas = 5
+    ancho_ficha = width // numero_de_fichas
 
-# Almacenar los colores encontrados para cada ficha
-colores_encontrados = []
+    # Almacenar los colores encontrados para cada ficha
+    colores_encontrados = []
 
-# Iterar sobre cada ficha LEGO en la imagen
-for i in range(numero_de_fichas):
-    # Calcular el inicio y el fin de la región de la ficha en x
-    start_x = i * ancho_ficha
-    end_x = (i + 1) * ancho_ficha
+    # Iterar sobre cada ficha LEGO en la imagen
+    for i in range(numero_de_fichas):
+        # Calcular el inicio y el fin de la región de la ficha en x
+        start_x = i * ancho_ficha
+        end_x = (i + 1) * ancho_ficha
 
-    # Extraer la región de la ficha
-    ficha_region = pixels[middle_y, start_x:end_x]
+        # Extraer la región de la ficha
+        ficha_region = pixels[middle_y, start_x:end_x]
 
-    # Calcular el color promedio de la ficha
-    color_promedio = np.mean(ficha_region, axis=0).astype(int)
+        # Calcular el color promedio de la ficha
+        color_promedio = np.mean(ficha_region, axis=0).astype(int)
+        
+        # Encontrar el color LEGO más cercano al color promedio encontrado
+        color_lego_mas_cercano = encontrar_color_mas_cercano(color_promedio, colores_conocidos)
+        
+        # Añadir el color identificado a la lista de colores encontrados
+        colores_encontrados.append(color_lego_mas_cercano)
+
+    palabra = []
+
+    for item in colores_encontrados:
+        if df['Color'].str.contains(item).any():
+            palabra.append(df.loc[df["Color"] == item, "Letra"].values[0])
+        else:
+            print(f'Color: {item} - Nombre: No encontrado')
     
-    # Encontrar el color LEGO más cercano al color promedio encontrado
-    color_lego_mas_cercano = encontrar_color_mas_cercano(color_promedio, colores_conocidos)
-    
-    # Añadir el color identificado a la lista de colores encontrados
-    colores_encontrados.append(color_lego_mas_cercano)
+    return palabra
 
-# Imprimir los colores identificados para cada ficha de LEGO en la imagen
-print(colores_encontrados)
+
