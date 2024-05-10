@@ -56,3 +56,21 @@ El taller tiene como objetivo introducir a los participantes en los fundamentos 
 El taller se estructura en una serie de pasos que incluyen la preparación de materiales, introducción teórica, construcción de claves de cifrado, fotografía de las claves, cifrado y descifrado de mensajes, y actividades complementarias. Además, se proporciona una implementación técnica detallada utilizando la aplicación Gradio y se sugieren enlaces útiles para documentación adicional.
 
 
+
+## Nuestro ejercicio:
+
+Hemos construido claves de cifrado con piezas de LEGO de diferentes colores, representando valores de desplazamiento en un cifrado César. Luego, aplicamos estas claves para cifrar mensajes. Enfrentamos el desafío de descifrar un mensaje sin conocer la clave, utilizando diversas combinaciones de piezas de LEGO para ajustar el desplazamiento:
+
+Ejemplo:
+
+El programa recibe estas imágenes:
+
+![image](https://github.com/rnoguer22/LEGO_xd/assets/91721860/881a50d9-79d9-4309-9512-9109327dbfd6)
+![image](https://github.com/rnoguer22/LEGO_xd/assets/91721860/2d5c99ef-a002-44d4-a570-d67f41364f92)
+
+
+Y nos devuelve:
+
+HOLA PATATA
+rzvl alelel
+
