@@ -39,7 +39,7 @@ def color_recognise(path):
     middle_y = height // 2
 
     # Suponer que tenemos un número conocido de fichas de LEGO alineadas
-    numero_de_fichas = 5
+    numero_de_fichas = 6
     ancho_ficha = width // numero_de_fichas
 
     # Almacenar los colores encontrados para cada ficha
@@ -74,5 +74,5 @@ def color_recognise(path):
     return palabra
 
 
-print(color_recognise('hola.png'))
+print(color_recognise('patata.jpeg'))
 
